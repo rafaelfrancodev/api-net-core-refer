@@ -1,0 +1,9 @@
+C:\_src\_rafjs\DEV.API.App\src\Modules\App\DEV.API.App.Infra.IoC\bin\Debug\netcoreapp2.1\DEV.API.App.Infra.IoC.deps.json
+C:\_src\_rafjs\DEV.API.App\src\Modules\App\DEV.API.App.Infra.IoC\bin\Debug\netcoreapp2.1\DEV.API.App.Infra.IoC.dll
+C:\_src\_rafjs\DEV.API.App\src\Modules\App\DEV.API.App.Infra.IoC\obj\Debug\netcoreapp2.1\DEV.API.App.Infra.IoC.csprojAssemblyReference.cache
+C:\_src\_rafjs\DEV.API.App\src\Modules\App\DEV.API.App.Infra.IoC\obj\Debug\netcoreapp2.1\DEV.API.App.Infra.IoC.csproj.CoreCompileInputs.cache
+C:\_src\_rafjs\DEV.API.App\src\Modules\App\DEV.API.App.Infra.IoC\obj\Debug\netcoreapp2.1\DEV.API.App.Infra.IoC.AssemblyInfoInputs.cache
+C:\_src\_rafjs\DEV.API.App\src\Modules\App\DEV.API.App.Infra.IoC\obj\Debug\netcoreapp2.1\DEV.API.App.Infra.IoC.AssemblyInfo.cs
+C:\_src\_rafjs\DEV.API.App\src\Modules\App\DEV.API.App.Infra.IoC\bin\Debug\netcoreapp2.1\DEV.API.App.Infra.IoC.pdb
+C:\_src\_rafjs\DEV.API.App\src\Modules\App\DEV.API.App.Infra.IoC\obj\Debug\netcoreapp2.1\DEV.API.App.Infra.IoC.dll
+C:\_src\_rafjs\DEV.API.App\src\Modules\App\DEV.API.App.Infra.IoC\obj\Debug\netcoreapp2.1\DEV.API.App.Infra.IoC.pdb

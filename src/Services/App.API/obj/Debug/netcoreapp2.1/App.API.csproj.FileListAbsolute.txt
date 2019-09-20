@@ -1,0 +1,15 @@
+C:\_src\_rafjs\DEV.API.App\src\Services\App.API\obj\Debug\netcoreapp2.1\App.API.csproj.CoreCompileInputs.cache
+C:\_src\_rafjs\DEV.API.App\src\Services\App.API\obj\Debug\netcoreapp2.1\App.API.AssemblyInfoInputs.cache
+C:\_src\_rafjs\DEV.API.App\src\Services\App.API\obj\Debug\netcoreapp2.1\App.API.AssemblyInfo.cs
+C:\_src\_rafjs\DEV.API.App\src\Services\App.API\bin\Debug\netcoreapp2.1\App.API.deps.json
+C:\_src\_rafjs\DEV.API.App\src\Services\App.API\bin\Debug\netcoreapp2.1\App.API.runtimeconfig.json
+C:\_src\_rafjs\DEV.API.App\src\Services\App.API\bin\Debug\netcoreapp2.1\App.API.runtimeconfig.dev.json
+C:\_src\_rafjs\DEV.API.App\src\Services\App.API\bin\Debug\netcoreapp2.1\App.API.dll
+C:\_src\_rafjs\DEV.API.App\src\Services\App.API\obj\Debug\netcoreapp2.1\App.API.csprojAssemblyReference.cache
+C:\_src\_rafjs\DEV.API.App\src\Services\App.API\obj\Debug\netcoreapp2.1\App.API.RazorAssemblyInfo.cache
+C:\_src\_rafjs\DEV.API.App\src\Services\App.API\obj\Debug\netcoreapp2.1\App.API.RazorAssemblyInfo.cs
+C:\_src\_rafjs\DEV.API.App\src\Services\App.API\obj\Debug\netcoreapp2.1\App.API.RazorTargetAssemblyInfo.cache
+C:\_src\_rafjs\DEV.API.App\src\Services\App.API\bin\Debug\netcoreapp2.1\App.API.pdb
+C:\_src\_rafjs\DEV.API.App\src\Services\App.API\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
+C:\_src\_rafjs\DEV.API.App\src\Services\App.API\obj\Debug\netcoreapp2.1\App.API.dll
+C:\_src\_rafjs\DEV.API.App\src\Services\App.API\obj\Debug\netcoreapp2.1\App.API.pdb

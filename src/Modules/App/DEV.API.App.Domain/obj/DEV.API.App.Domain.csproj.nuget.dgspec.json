@@ -1,0 +1,60 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\_src\\_rafjs\\DEV.API.App\\src\\Modules\\App\\DEV.API.App.Domain\\DEV.API.App.Domain.csproj": {}
+  },
+  "projects": {
+    "C:\\_src\\_rafjs\\DEV.API.App\\src\\Modules\\App\\DEV.API.App.Domain\\DEV.API.App.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\_src\\_rafjs\\DEV.API.App\\src\\Modules\\App\\DEV.API.App.Domain\\DEV.API.App.Domain.csproj",
+        "projectName": "DEV.API.App.Domain",
+        "projectPath": "C:\\_src\\_rafjs\\DEV.API.App\\src\\Modules\\App\\DEV.API.App.Domain\\DEV.API.App.Domain.csproj",
+        "packagesPath": "C:\\Users\\rasantos\\.nuget\\packages\\",
+        "outputPath": "C:\\_src\\_rafjs\\DEV.API.App\\src\\Modules\\App\\DEV.API.App.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\rasantos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}
