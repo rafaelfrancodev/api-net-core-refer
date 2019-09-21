@@ -1,0 +1,42 @@
+version: "3.4"
+
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2017-CU8-ubuntu
+    restart: always
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=123Aa321
+      - MSSQL_COLLATION=Latin1_General_CI_AS
+    ports:
+      - "3433:1433"
+
+  nosql.db:
+    image: mongo
+    restart: always
+    ports:
+      - "37017:27017"
+
+  mysqlsrv:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: "123Aa321"
+      MYSQL_DATABASE: "db_defatul"
+    ports:
+      - "33306:3306"
+    volumes:
+      - /home/renatogroffe/Desenvolvimento/Docker/Volumes/MySql:/var/lib/mysql
+    networks:
+      - mysql-compose-network
+
+  adminer:
+    image: adminer
+    ports:
+      - 8080:8080
+    networks:
+      - mysql-compose-network
+
+networks: 
+  mysql-compose-network:
+    driver: bridge
+    

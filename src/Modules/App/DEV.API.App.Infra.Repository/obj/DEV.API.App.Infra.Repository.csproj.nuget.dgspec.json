@@ -4,14 +4,14 @@
     "C:\\_src\\_rafjs\\DEV.API.App\\src\\Modules\\App\\DEV.API.App.Infra.Repository\\DEV.API.App.Infra.Repository.csproj": {}
   },
   "projects": {
-    "C:\\_src\\_rafjs\\DEV.API.App\\src\\Modules\\App\\DEV.API.App.Infra.Repository\\DEV.API.App.Infra.Repository.csproj": {
+    "C:\\_src\\_rafjs\\DEV.API.App\\src\\Modules\\App\\DEV.API.App.Domain.Core\\DEV.API.App.Domain.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\_src\\_rafjs\\DEV.API.App\\src\\Modules\\App\\DEV.API.App.Infra.Repository\\DEV.API.App.Infra.Repository.csproj",
-        "projectName": "DEV.API.App.Infra.Repository",
-        "projectPath": "C:\\_src\\_rafjs\\DEV.API.App\\src\\Modules\\App\\DEV.API.App.Infra.Repository\\DEV.API.App.Infra.Repository.csproj",
+        "projectUniqueName": "C:\\_src\\_rafjs\\DEV.API.App\\src\\Modules\\App\\DEV.API.App.Domain.Core\\DEV.API.App.Domain.Core.csproj",
+        "projectName": "DEV.API.App.Domain.Core",
+        "projectPath": "C:\\_src\\_rafjs\\DEV.API.App\\src\\Modules\\App\\DEV.API.App.Domain.Core\\DEV.API.App.Domain.Core.csproj",
         "packagesPath": "C:\\Users\\rasantos\\.nuget\\packages\\",
-        "outputPath": "C:\\_src\\_rafjs\\DEV.API.App\\src\\Modules\\App\\DEV.API.App.Infra.Repository\\obj\\",
+        "outputPath": "C:\\_src\\_rafjs\\DEV.API.App\\src\\Modules\\App\\DEV.API.App.Domain.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -41,11 +41,208 @@
       "frameworks": {
         "netcoreapp2.1": {
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[6.2.2, )"
+            },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[8.1.2, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[2.1.4, )"
+            },
             "Microsoft.NETCore.App": {
               "suppressParent": "All",
               "target": "Package",
               "version": "[2.1.0, )",
               "autoReferenced": true
+            },
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.7.2, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.2, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\_src\\_rafjs\\DEV.API.App\\src\\Modules\\App\\DEV.API.App.Domain\\DEV.API.App.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\_src\\_rafjs\\DEV.API.App\\src\\Modules\\App\\DEV.API.App.Domain\\DEV.API.App.Domain.csproj",
+        "projectName": "DEV.API.App.Domain",
+        "projectPath": "C:\\_src\\_rafjs\\DEV.API.App\\src\\Modules\\App\\DEV.API.App.Domain\\DEV.API.App.Domain.csproj",
+        "packagesPath": "C:\\Users\\rasantos\\.nuget\\packages\\",
+        "outputPath": "C:\\_src\\_rafjs\\DEV.API.App\\src\\Modules\\App\\DEV.API.App.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\rasantos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {
+              "C:\\_src\\_rafjs\\DEV.API.App\\src\\Modules\\App\\DEV.API.App.Domain.Core\\DEV.API.App.Domain.Core.csproj": {
+                "projectPath": "C:\\_src\\_rafjs\\DEV.API.App\\src\\Modules\\App\\DEV.API.App.Domain.Core\\DEV.API.App.Domain.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[6.2.2, )"
+            },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[8.1.2, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[2.1.4, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            },
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.7.2, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.2, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\_src\\_rafjs\\DEV.API.App\\src\\Modules\\App\\DEV.API.App.Infra.Repository\\DEV.API.App.Infra.Repository.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\_src\\_rafjs\\DEV.API.App\\src\\Modules\\App\\DEV.API.App.Infra.Repository\\DEV.API.App.Infra.Repository.csproj",
+        "projectName": "DEV.API.App.Infra.Repository",
+        "projectPath": "C:\\_src\\_rafjs\\DEV.API.App\\src\\Modules\\App\\DEV.API.App.Infra.Repository\\DEV.API.App.Infra.Repository.csproj",
+        "packagesPath": "C:\\Users\\rasantos\\.nuget\\packages\\",
+        "outputPath": "C:\\_src\\_rafjs\\DEV.API.App\\src\\Modules\\App\\DEV.API.App.Infra.Repository\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\rasantos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {
+              "C:\\_src\\_rafjs\\DEV.API.App\\src\\Modules\\App\\DEV.API.App.Domain.Core\\DEV.API.App.Domain.Core.csproj": {
+                "projectPath": "C:\\_src\\_rafjs\\DEV.API.App\\src\\Modules\\App\\DEV.API.App.Domain.Core\\DEV.API.App.Domain.Core.csproj"
+              },
+              "C:\\_src\\_rafjs\\DEV.API.App\\src\\Modules\\App\\DEV.API.App.Domain\\DEV.API.App.Domain.csproj": {
+                "projectPath": "C:\\_src\\_rafjs\\DEV.API.App\\src\\Modules\\App\\DEV.API.App.Domain\\DEV.API.App.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[2.1.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[2.1.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[2.1.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.4, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[2.1.1, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[2.1.1, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.2, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[2.1.4, )"
             }
           },
           "imports": [

@@ -6,3 +6,4 @@ C:\_src\_rafjs\DEV.API.App\src\Modules\App\DEV.API.App.Domain\obj\Debug\netcorea
 C:\_src\_rafjs\DEV.API.App\src\Modules\App\DEV.API.App.Domain\obj\Debug\netcoreapp2.1\DEV.API.App.Domain.AssemblyInfo.cs
 C:\_src\_rafjs\DEV.API.App\src\Modules\App\DEV.API.App.Domain\obj\Debug\netcoreapp2.1\DEV.API.App.Domain.dll
 C:\_src\_rafjs\DEV.API.App\src\Modules\App\DEV.API.App.Domain\obj\Debug\netcoreapp2.1\DEV.API.App.Domain.pdb
+C:\_src\_rafjs\DEV.API.App\src\Modules\App\DEV.API.App.Domain\obj\Debug\netcoreapp2.1\DEV.API.App.Domain.csprojAssemblyReference.cache
