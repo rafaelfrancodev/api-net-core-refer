@@ -4,14 +4,14 @@
     "C:\\_src\\_rafjs\\DEV.API.App\\src\\Services\\App.API\\App.API.csproj": {}
   },
   "projects": {
-    "C:\\_src\\_rafjs\\DEV.API.App\\src\\Modules\\App\\DEV.API.App.Infra.IoC\\DEV.API.App.Infra.IoC.csproj": {
+    "C:\\_src\\_rafjs\\DEV.API.App\\src\\Services\\App.API\\App.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\_src\\_rafjs\\DEV.API.App\\src\\Modules\\App\\DEV.API.App.Infra.IoC\\DEV.API.App.Infra.IoC.csproj",
-        "projectName": "DEV.API.App.Infra.IoC",
-        "projectPath": "C:\\_src\\_rafjs\\DEV.API.App\\src\\Modules\\App\\DEV.API.App.Infra.IoC\\DEV.API.App.Infra.IoC.csproj",
+        "projectUniqueName": "C:\\_src\\_rafjs\\DEV.API.App\\src\\Services\\App.API\\App.API.csproj",
+        "projectName": "App.API",
+        "projectPath": "C:\\_src\\_rafjs\\DEV.API.App\\src\\Services\\App.API\\App.API.csproj",
         "packagesPath": "C:\\Users\\rasantos\\.nuget\\packages\\",
-        "outputPath": "C:\\_src\\_rafjs\\DEV.API.App\\src\\Modules\\App\\DEV.API.App.Infra.IoC\\obj\\",
+        "outputPath": "C:\\_src\\_rafjs\\DEV.API.App\\src\\Services\\App.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -45,74 +45,10 @@
               "target": "Package",
               "version": "[7.0.0, )"
             },
-            "Microsoft.AspNetCore": {
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
-              "version": "[2.2.0, )"
+              "version": "[7.0.0, )"
             },
-            "Microsoft.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[2.2.6, )"
-            },
-            "Microsoft.NETCore.App": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[2.1.0, )",
-              "autoReferenced": true
-            },
-            "Pomelo.EntityFrameworkCore.MySql": {
-              "target": "Package",
-              "version": "[2.2.0, )"
-            }
-          },
-          "imports": [
-            "net461"
-          ],
-          "assetTargetFallback": true,
-          "warn": true
-        }
-      }
-    },
-    "C:\\_src\\_rafjs\\DEV.API.App\\src\\Services\\App.API\\App.API.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\_src\\_rafjs\\DEV.API.App\\src\\Services\\App.API\\App.API.csproj",
-        "projectName": "App.API",
-        "projectPath": "C:\\_src\\_rafjs\\DEV.API.App\\src\\Services\\App.API\\App.API.csproj",
-        "packagesPath": "C:\\Users\\rasantos\\.nuget\\packages\\",
-        "outputPath": "C:\\_src\\_rafjs\\DEV.API.App\\src\\Services\\App.API\\obj\\",
-        "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
-        "configFilePaths": [
-          "C:\\Users\\rasantos\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "netcoreapp2.1"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "netcoreapp2.1": {
-            "projectReferences": {
-              "C:\\_src\\_rafjs\\DEV.API.App\\src\\Modules\\App\\DEV.API.App.Infra.IoC\\DEV.API.App.Infra.IoC.csproj": {
-                "projectPath": "C:\\_src\\_rafjs\\DEV.API.App\\src\\Modules\\App\\DEV.API.App.Infra.IoC\\DEV.API.App.Infra.IoC.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "netcoreapp2.1": {
-          "dependencies": {
             "Microsoft.AspNetCore.App": {
               "suppressParent": "All",
               "target": "Package",
@@ -125,6 +61,7 @@
               "version": "[2.1.2, )"
             },
             "Microsoft.NETCore.App": {
+              "suppressParent": "All",
               "target": "Package",
               "version": "[2.1.0, )",
               "autoReferenced": true
@@ -133,9 +70,9 @@
               "target": "Package",
               "version": "[1.7.9, )"
             },
-            "SwashBuckle.AspNetCore.MicrosoftExtensions": {
+            "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[0.5.0, )"
+              "version": "[4.0.1, )"
             }
           },
           "imports": [

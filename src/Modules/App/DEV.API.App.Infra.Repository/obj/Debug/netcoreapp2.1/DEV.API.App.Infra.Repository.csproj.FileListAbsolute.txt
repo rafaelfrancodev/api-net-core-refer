@@ -1,7 +1,6 @@
 C:\_src\_rafjs\DEV.API.App\src\Modules\App\DEV.API.App.Infra.Repository\bin\Debug\netcoreapp2.1\DEV.API.App.Infra.Repository.deps.json
 C:\_src\_rafjs\DEV.API.App\src\Modules\App\DEV.API.App.Infra.Repository\bin\Debug\netcoreapp2.1\DEV.API.App.Infra.Repository.dll
 C:\_src\_rafjs\DEV.API.App\src\Modules\App\DEV.API.App.Infra.Repository\bin\Debug\netcoreapp2.1\DEV.API.App.Infra.Repository.pdb
-C:\_src\_rafjs\DEV.API.App\src\Modules\App\DEV.API.App.Infra.Repository\obj\Debug\netcoreapp2.1\DEV.API.App.Infra.Repository.csprojAssemblyReference.cache
 C:\_src\_rafjs\DEV.API.App\src\Modules\App\DEV.API.App.Infra.Repository\obj\Debug\netcoreapp2.1\DEV.API.App.Infra.Repository.csproj.CoreCompileInputs.cache
 C:\_src\_rafjs\DEV.API.App\src\Modules\App\DEV.API.App.Infra.Repository\obj\Debug\netcoreapp2.1\DEV.API.App.Infra.Repository.AssemblyInfoInputs.cache
 C:\_src\_rafjs\DEV.API.App\src\Modules\App\DEV.API.App.Infra.Repository\obj\Debug\netcoreapp2.1\DEV.API.App.Infra.Repository.AssemblyInfo.cs

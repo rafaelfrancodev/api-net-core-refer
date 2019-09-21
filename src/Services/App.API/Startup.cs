@@ -13,6 +13,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Microsoft.AspNetCore.Rewrite;
 using Swashbuckle.AspNetCore.Swagger;
+using MediatR;
 
 namespace App.API
 {
@@ -29,7 +30,19 @@ namespace App.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddOptions();
+            #region AddCors
 
+            services.AddCors(options =>
+            {
+                options.AddPolicy("CorsPolicy", builder => builder
+                    .AllowAnyOrigin()
+                    .AllowAnyMethod()
+                    .AllowAnyHeader()
+                    .AllowCredentials());
+            });
+
+            #endregion
             services.AddSwaggerGen(s =>
             {
                 s.SwaggerDoc("v1", new Info
@@ -40,6 +53,10 @@ namespace App.API
                     Contact = new Contact { Name = "DEV.API.App", Url = "" },
                 });
             });
+
+            services.AddMediatR(typeof(Startup));
+            services.AddSingleton(Configuration);
+            RegisterServices(services, Configuration);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -58,6 +75,10 @@ namespace App.API
             app.UseAuthentication();
             app.UseMvc();
             app.UseSwagger();
+            app.UseSwaggerUI(s =>
+            {
+                s.SwaggerEndpoint("/swagger/v1/swagger.json", "DEV.App - API - v1.0");
+            });
 
             //Starting our API in Swagger page
             var option = new RewriteOptions();
@@ -67,7 +88,7 @@ namespace App.API
 
         void RegisterServices(IServiceCollection services, IConfiguration configuration)
         {
-            new RootBootstraper();
+            //new RootBootstrapper();
         }
     }
 }
