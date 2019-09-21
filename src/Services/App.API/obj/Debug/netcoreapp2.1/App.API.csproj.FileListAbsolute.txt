@@ -13,3 +13,6 @@ C:\_src\_rafjs\DEV.API.App\src\Services\App.API\bin\Debug\netcoreapp2.1\App.API.
 C:\_src\_rafjs\DEV.API.App\src\Services\App.API\obj\Debug\netcoreapp2.1\App.API.RazorTargetAssemblyInfo.cache
 C:\_src\_rafjs\DEV.API.App\src\Services\App.API\obj\Debug\netcoreapp2.1\App.API.dll
 C:\_src\_rafjs\DEV.API.App\src\Services\App.API\obj\Debug\netcoreapp2.1\App.API.pdb
+C:\_src\_rafjs\DEV.API.App\src\Services\App.API\bin\Debug\netcoreapp2.1\DEV.API.App.Infra.IoC.dll
+C:\_src\_rafjs\DEV.API.App\src\Services\App.API\bin\Debug\netcoreapp2.1\DEV.API.App.Infra.IoC.pdb
+C:\_src\_rafjs\DEV.API.App\src\Services\App.API\obj\Debug\netcoreapp2.1\App.API.csproj.CopyComplete

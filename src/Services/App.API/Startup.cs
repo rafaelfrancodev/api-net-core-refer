@@ -14,6 +14,7 @@ using Microsoft.Extensions.Options;
 using Microsoft.AspNetCore.Rewrite;
 using Swashbuckle.AspNetCore.Swagger;
 using MediatR;
+using DEV.API.App.Infra.IoC;
 
 namespace App.API
 {
@@ -88,7 +89,7 @@ namespace App.API
 
         void RegisterServices(IServiceCollection services, IConfiguration configuration)
         {
-            //new RootBootstrapper();
+           new RootBootstrapper();
         }
     }
 }

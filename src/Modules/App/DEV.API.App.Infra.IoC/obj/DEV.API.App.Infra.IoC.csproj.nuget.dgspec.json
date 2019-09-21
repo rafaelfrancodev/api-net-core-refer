@@ -49,6 +49,10 @@
               "target": "Package",
               "version": "[2.1.0, )"
             },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[2.1.4, )"
+            },
             "Microsoft.NETCore.App": {
               "suppressParent": "All",
               "target": "Package",
@@ -57,7 +61,7 @@
             },
             "Pomelo.EntityFrameworkCore.MySql": {
               "target": "Package",
-              "version": "[2.2.0, )"
+              "version": "[2.1.4, )"
             }
           },
           "imports": [
