@@ -1,10 +1,7 @@
 ﻿using DEV.API.App.Domain.Core.Model;
 using MongoDB.Bson.Serialization.Conventions;
 using MongoDB.Driver;
-using System;
-using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
-using System.Text;
 
 namespace DEV.API.App.Infra.Repository.Context.NoSql
 {

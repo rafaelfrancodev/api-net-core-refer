@@ -3,15 +3,13 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
-using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
-using System.Text;
 
 namespace DEV.API.App.Infra.Repository.Configuration.Properties
 {
     [ExcludeFromCodeCoverage]
-    public static class ConfigPropertieDefaul
+    public static class ConfigPropertieDefault
     {
         internal static bool IsEntity(Type type)
         {

@@ -1,10 +1,11 @@
 ﻿using DEV.API.App.Domain.Models;
+using DEV.API.App.Infra.Repository.Configuration.Map.SqlServer;
+using DEV.API.App.Infra.Repository.Configuration.Properties;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
-using System;
-using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
-using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace DEV.API.App.Infra.Repository.Context.Relational
 {
@@ -38,13 +39,28 @@ namespace DEV.API.App.Infra.Repository.Context.Relational
 
         private void ConfigModelCreatingMySql(ModelBuilder modelBuilder)
         {
-
-
+            modelBuilder
+                .AddDefaultProperties()
+                .ApplyConfiguration(new PersonMapMySql());
         }
 
         private void ConfigModelCreatingSqlServer(ModelBuilder modelBuilder)
         {
+            modelBuilder
+                .AddDefaultProperties()
+                .ApplyConfiguration(new PersonMapSqlServer());
+        }
 
+        public override int SaveChanges()
+        {
+            ConfigPropertieDefault.SaveDefaultPropertiesChanges(ChangeTracker);
+            return base.SaveChanges();
+        }
+
+        public override Task<int> SaveChangesAsync(bool acceptAllChangesOnSuccess, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            ConfigPropertieDefault.SaveDefaultPropertiesChanges(ChangeTracker);
+            return base.SaveChangesAsync(acceptAllChangesOnSuccess, cancellationToken);
         }
     }
 }
