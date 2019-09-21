@@ -1,7 +1,19 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Configuration\Map\MySql\" />
+    <Folder Include="Configuration\Map\SqlServer\" />
+    <Folder Include="Configuration\Properties\" />
+    <Folder Include="Context\Relational\" />
+    <Folder Include="Context\NoSql\" />
+    <Folder Include="UoW\" />
+    <Folder Include="Properties\" />
+    <Folder Include="Repositories\Entities\Strategies\Interfaces\MySql\" />
+    <Folder Include="Repositories\Entities\Strategies\Interfaces\SqlServer\" />
+  </ItemGroup>
 
 </Project>
