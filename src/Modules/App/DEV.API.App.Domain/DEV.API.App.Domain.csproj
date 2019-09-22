@@ -17,8 +17,4 @@
     <ProjectReference Include="..\DEV.API.App.Domain.Core\DEV.API.App.Domain.Core.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Interfaces\Entities\Base\" />
-  </ItemGroup>
-
 </Project>
