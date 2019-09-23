@@ -11,7 +11,7 @@ namespace DEV.API.App.Infra.Repository.Configuration.Map.SqlServer
     {
         public void Configure(EntityTypeBuilder<Person> builder)
         {
-            builder.ToTable("person", "common").AddIsDeletedFilter();
+            builder.ToTable("person").AddIsDeletedFilter();
             builder.HasKey(x => x.Id);
             builder.Property(x => x.Id).HasColumnName("id");
             builder.Property(x => x.Name).HasColumnName("name");
