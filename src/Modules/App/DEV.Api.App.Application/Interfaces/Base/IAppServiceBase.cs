@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace DEV.Api.App.Application.Interfaces.Base
 {
@@ -11,5 +12,6 @@ namespace DEV.Api.App.Application.Interfaces.Base
         Task<TViewModel> UpdateAsync(TKey id, TInput obj);
         Task<bool> DeleteAsync(TKey id);
         Task<TViewModel> GetByIdAsync(TKey id);
+        Task<IEnumerable<TViewModel>> GetAllAsync();
     }
 }

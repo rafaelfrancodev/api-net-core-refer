@@ -1,5 +1,5 @@
-﻿using DEV.API.App.Domain.Core.Model;
-using DEV.API.App.Domain.Core.UoW.Inferfaces;
+﻿using DEV.API.App.Domain.Core.Inferfaces;
+using DEV.API.App.Domain.Core.Model;
 
 namespace DEV.API.App.Domain.Core.UoW.Base
 {
@@ -12,7 +12,7 @@ namespace DEV.API.App.Domain.Core.UoW.Base
             _notify = notify.Invoke();
         }
 
-        protected void NotificarErrosValidacao(EntityModel message)
+        protected void NotifyErrorsAndValidation(EntityModel message)
         {
             foreach (var error in message.ValidationResult.Errors)
                 _notify.NewNotificationBadRequest(error.PropertyName, error.ErrorMessage);

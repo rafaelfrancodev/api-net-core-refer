@@ -1,5 +1,5 @@
-﻿using DEV.API.App.Domain.Core.Model;
-using DEV.API.App.Domain.Core.UoW.Inferfaces;
+﻿using DEV.API.App.Domain.Core.Inferfaces;
+using DEV.API.App.Domain.Core.Model;
 using DEV.API.App.Domain.Interfaces.Entities;
 using DEV.API.App.Domain.Interfaces.Repositories.Entities;
 using DEV.API.App.Domain.Interfaces.Repositories.Entities.Base;
@@ -7,9 +7,6 @@ using DEV.API.App.Domain.Interfaces.UoW;
 using DEV.API.App.Domain.Models;
 using DEV.API.App.Domain.Service.Base;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace DEV.API.App.Domain.Service
 {

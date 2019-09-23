@@ -1,4 +1,4 @@
-﻿namespace DEV.API.App.Domain.Core.UoW.Inferfaces
+﻿namespace DEV.API.App.Domain.Core.Inferfaces
 {
     public interface ISmartNotification
     {

@@ -12,6 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\DEV.Api.App.Application\DEV.Api.App.Application.csproj" />
     <ProjectReference Include="..\DEV.API.App.Infra.Repository\DEV.API.App.Infra.Repository.csproj" />
   </ItemGroup>
 
