@@ -18,7 +18,10 @@ namespace DEV.API.App.Infra.Repository.Context.NoSql
             _mongoDatabase = client.GetDatabase(database);
         }
 
-        public IMongoCollection<Log<T>> Log => _mongoDatabase.GetCollection<Log<T>>("Log");
+        public IMongoCollection<Log<T>> GetCollection<T>()
+        {
+            return _mongoDatabase.GetCollection<Log<T>>("Log");
+        }
     }
 
 }

@@ -1,81 +1,92 @@
-﻿using DEV.API.App.Domain.Core.UoW;
+﻿using DEV.API.App.Domain.Core.Model;
+using DEV.API.App.Domain.Core.UoW;
+using DEV.API.App.Domain.Interfaces.Repositories.Entities.Base;
+using MediatR;
+using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
+using System;
+using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
+using System.Linq;
+using System.Linq.Expressions;
+using System.Threading.Tasks;
 
 namespace DEV.API.App.Domain.Interfaces.Entities.Base
 {
-    public class DomainServiceBase<TEntity, TKey, TIUnitOfWork> : UnitOfWorkBase<TIUnitOfWork>, IDomainService<TEntity, TKey>
-         where TEntity : Entidade<TKey>
+    public class DomainServiceBase<TEntity, TKey, TIUnitOfWork> : UnitOfWorkBase<TIUnitOfWork>, IDomainServiceBase<TEntity, TKey>
+         where TEntity : EntityModel<TKey>
          where TKey : struct
         where TIUnitOfWork : IUnitOfWorkBase
     {
-        protected readonly IRepositorio<TEntity, TKey> _repositorio;
+        protected readonly IRepository<TEntity, TKey> _repository;
         protected readonly TIUnitOfWork _unitOfWork;
-        private readonly IRepositorioLog<TKey> _repositorioLog;
-        private readonly UsuarioLogado.Modelo.UsuarioLogado _usuarioLogado;
+        private readonly IRepositoryLog<TKey> _repositoryLog;
 
-        public DominioServicoBase(
-            IRepositorio<TEntity, TKey> repositorio,
+        public DomainServiceBase(
             TIUnitOfWork unitOfWork,
-            INotificationHandler<DomainNotification> messageHandler,
-            IRepositorioLog<TKey> repositorioLog, UsuarioLogado.Modelo.UsuarioLogado usuarioLogado) : base(unitOfWork, messageHandler)
+            IRepository<TEntity, TKey> repository,
+            IRepositoryLog<TKey> repositoryLog,
+            INotificationHandler<DomainNotification> messageHandler
+            ) : base(unitOfWork, messageHandler)
         {
-            _repositorio = repositorio;
             _unitOfWork = unitOfWork;
-            _repositorioLog = repositorioLog;
-            _usuarioLogado = usuarioLogado;
+            _repository = repository;           
+            _repositoryLog = repositoryLog;
         }
 
 
-        public virtual async Task<TEntity> AlterarAsync(TKey id, TEntity obj)
+        public virtual async Task<TEntity> UpdateAsync(TKey id, TEntity obj)
         {
             using (_unitOfWork.BeginTransaction())
             {
-                var objetoAnterior = await _repositorio.SelecionarPorIdAsync(id);
-                await GravarLog<TEntity, TKey>(obj, objetoAnterior, "AlterarAsync");
-                var retorno = await _repositorio.AlterarAsync(id, obj);
+                var objectBefore = await _repository.GetByIdAsync(id);
+                await RegisterLog<TEntity, TKey>(obj, objectBefore, "UpdateAsync");
+                var result = await _repository.UpdateAsync(id, obj);
                 Commit();
-                return retorno;
+                return result;
             }
         }
-        public virtual async Task DeletarAsync(TEntity entity)
+        public virtual async Task DeleteAsync(TEntity entity)
         {
             using (_unitOfWork.BeginTransaction())
             {
-                await GravarLog<TEntity, TKey>(null, entity, "DeletarAsync");
-                await _repositorio.DeletarAsync(entity);
+                await RegisterLog<TEntity, TKey>(null, entity, "DeleteAsync");
+                await _repository.DeleteAsync(entity);
                 Commit();
             }
         }
-        public virtual async Task InserirAsync(TEntity entity)
+        public virtual async Task<TEntity> InsertAsync(TEntity entity)
         {
             using (_unitOfWork.BeginTransaction())
             {
-                await _repositorio.InserirAsync(entity);
+                var result = await _repository.InsertAsync(entity);
                 Commit();
-                await GravarLog<TEntity, TKey>(entity, null, "InserirAsync");
+                await RegisterLog<TEntity, TKey>(entity, null, "InsertAsync");
+                return result;
             }
         }
-        public virtual async Task<IEnumerable<TEntity>> SelecionarAsync(Expression<Func<TEntity, bool>> where)
+        public virtual async Task<IEnumerable<TEntity>> SelectAsync(Expression<Func<TEntity, bool>> where)
         {
-            return await _repositorio.SelecionarAsync(where);
+            return await _repository.SelectAsync(where);
         }
-        public virtual async Task<TEntity> SelecionarPorIdAsync(TKey id)
+        public virtual async Task<TEntity> GetByIdAsync(TKey id)
         {
-            return await _repositorio.SelecionarPorIdAsync(id);
+            return await _repository.GetByIdAsync(id);
         }
 
         [ExcludeFromCodeCoverage]
-        public virtual async Task GravarLog<TEntity, TKey>(TEntity entityAtual, TEntity entityAntes, string operacao)
-            where TEntity : Entidade<TKey>
+        public virtual async Task RegisterLog<TEntity, TKey>(TEntity entityNow, TEntity entityBefore, string operation)
+            where TEntity : EntityModel<TKey>
            where TKey : struct
         {
-            if (_repositorio.Context == null) return;
+            if (_repository.Context == null) return;
 
-            var entityDefault = entityAtual == null ? entityAntes : entityAtual;
+            var entityDefault = entityNow == null ? entityBefore : entityNow;
             var type = entityDefault.GetType();
-            var schemaAnnotation = _repositorio.Context.Model.FindEntityType(type).GetAnnotations();
+            var schemaAnnotation = _repository.Context.Model.FindEntityType(type).GetAnnotations();
 
-            var registroAtual = entityAtual != null ? JsonConvert.SerializeObject(entityAtual, Formatting.Indented, Settings<TEntity, TKey>()) : "";
-            var registroAntes = entityAntes != null ? JsonConvert.SerializeObject(entityAntes, Formatting.Indented, Settings<TEntity, TKey>()) : "";
+            var registerNow = entityNow != null ? JsonConvert.SerializeObject(entityNow, Formatting.Indented, Settings<TEntity, TKey>()) : "";
+            var registerBefore = entityBefore != null ? JsonConvert.SerializeObject(entityBefore, Formatting.Indented, Settings<TEntity, TKey>()) : "";
 
             var schema = schemaAnnotation.FirstOrDefault(x => x.Name == "Relational:Schema");
             var table = schemaAnnotation.FirstOrDefault(x => x.Name == "Relational:TableName");
@@ -92,21 +103,21 @@ namespace DEV.API.App.Domain.Interfaces.Entities.Base
             var log = new Log<TKey>(
                 entityDefault.Id,
                 type.ToString(),
-                _usuarioLogado?.Id,
-                _usuarioLogado?.Login,
-                _usuarioLogado?.IdPessoa,
-                operacao,
                 schemaName,
                 tableName,
-                registroAtual,
-                registroAntes
+                null,
+                null,
+                "",
+                operation,
+                registerBefore,
+                registerNow
             );
 
-            await _repositorioLog.InserirLogAsync(log);
+            await _repositoryLog.InsertLogAsync(log);
         }
 
         [ExcludeFromCodeCoverage]
-        private static JsonSerializerSettings Settings<TEntity, TKey>() where TEntity : Entidade<TKey> where TKey : struct
+        private static JsonSerializerSettings Settings<TEntity, TKey>() where TEntity : EntityModel<TKey> where TKey : struct
         {
             return new JsonSerializerSettings()
             {
@@ -115,38 +126,36 @@ namespace DEV.API.App.Domain.Interfaces.Entities.Base
         }
 
         [ExcludeFromCodeCoverage]
-        public async Task GravarLogAlterar<TEntity, TKey>(TKey id, TEntity entityAtual)
-            where TEntity : Entidade<TKey>
+        public async Task RegisterLogUpdate<TEntity, TKey>(TKey id, TEntity entityNow)
+            where TEntity : EntityModel<TKey>
             where TKey : struct
         {
-            if (_repositorio.Context == null) return;
+            if (_repository.Context == null) return;
 
 
-            var entityAnterior = _repositorio.Context.Set<TEntity>().AsNoTracking().FirstOrDefault(x => x.Id.Equals(id));
-            await GravarLog<TEntity, TKey>(entityAtual, entityAnterior, "AlterarAsync");
+            var entityAnterior = _repository.Context.Set<TEntity>().AsNoTracking().FirstOrDefault(x => x.Id.Equals(id));
+            await RegisterLog<TEntity, TKey>(entityNow, entityAnterior, "UpdateAsync");
         }
 
         [ExcludeFromCodeCoverage]
-        public async Task GravarLogInserir<TEntity, TKey>(TEntity entityAtual)
-            where TEntity : Entidade<TKey>
+        public async Task RegisterLogInsert<TEntity, TKey>(TEntity entityNow)
+            where TEntity : EntityModel<TKey>
             where TKey : struct
         {
-            if (_repositorio.Context == null) return;
+            if (_repository.Context == null) return;
 
-            await GravarLog<TEntity, TKey>(entityAtual, null, "InserirAsync");
+            await RegisterLog<TEntity, TKey>(entityNow, null, "InsertAsync");
         }
 
         [ExcludeFromCodeCoverage]
-        public async Task GravarLogDeletar<TEntity, TKey>(TKey id)
-            where TEntity : Entidade<TKey>
+        public async Task RegisterLogDelete<TEntity, TKey>(TKey id)
+            where TEntity : EntityModel<TKey>
             where TKey : struct
         {
-            if (_repositorio.Context == null) return;
+            if (_repository.Context == null) return;
 
-            var entityAnterior = _repositorio.Context.Set<TEntity>().AsNoTracking().FirstOrDefault(x => x.Id.Equals(id));
-            await GravarLog<TEntity, TKey>(null, entityAnterior, "DeletarAsync");
+            var entityAnterior = _repository.Context.Set<TEntity>().AsNoTracking().FirstOrDefault(x => x.Id.Equals(id));
+            await RegisterLog<TEntity, TKey>(null, entityAnterior, "DeleteAsync");
         }
     }
-
-
 }

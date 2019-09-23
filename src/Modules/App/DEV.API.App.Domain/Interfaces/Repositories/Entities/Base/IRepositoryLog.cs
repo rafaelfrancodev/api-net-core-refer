@@ -9,5 +9,6 @@ namespace DEV.API.App.Domain.Interfaces.Repositories.Entities.Base
     public interface IRepositoryLog<T>
     {
         Task InsertLogAsync(Log<T> log);
+        Task InsertLogAsync<TKey>(Log<TKey> log);
     }
 }

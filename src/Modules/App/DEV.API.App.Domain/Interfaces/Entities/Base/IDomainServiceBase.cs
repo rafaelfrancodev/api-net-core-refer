@@ -13,6 +13,6 @@ namespace DEV.API.App.Domain.Interfaces.Entities.Base
         Task<TEntity> UpdateAsync(TKey id, TEntity obj);
         Task DeleteAsync(TEntity obj);
         Task<IEnumerable<TEntity>> SelectAsync(Expression<Func<TEntity, bool>> where);
-        Task<TEntity> GetByIdIdAsync(TKey id);
+        Task<TEntity> GetByIdAsync(TKey id);
     }
 }

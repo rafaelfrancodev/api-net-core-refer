@@ -1,4 +1,9 @@
-﻿namespace DEV.API.App.Domain.Core.UoW
+﻿using DEV.API.App.Domain.Core.Model;
+using DEV.API.App.Domain.Core.Notification;
+using MediatR;
+using System.Diagnostics.CodeAnalysis;
+
+namespace DEV.API.App.Domain.Core.UoW
 {
     [ExcludeFromCodeCoverage]
     public abstract class UnitOfWorkBase<TIUnitOfWork> : UnitOfWorkBase
@@ -38,3 +43,4 @@
             return false;
         }
     }
+}

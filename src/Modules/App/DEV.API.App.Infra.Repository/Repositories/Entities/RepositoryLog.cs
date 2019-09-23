@@ -3,7 +3,6 @@ using DEV.API.App.Domain.Core.Model;
 using DEV.API.App.Domain.Interfaces.Repositories.Entities.Base;
 using DEV.API.App.Infra.Repository.Context.NoSql;
 using Microsoft.Extensions.Configuration;
-using MongoDB.Driver;
 using System.Diagnostics.CodeAnalysis;
 using System.Threading.Tasks;
 
@@ -23,7 +22,12 @@ namespace DEV.API.App.Infra.Repository.Repositories.Entities
         
         public async Task InsertLogAsync(Log<T> log)
         {
-            await _context.Log.InsertOneAsync(log);
+            await _context.GetCollection<T>().InsertOneAsync(log);
+        }
+
+        public async Task InsertLogAsync<TKey>(Log<TKey> log)
+        {
+            await _context.GetCollection<TKey>().InsertOneAsync(log);
         }
     }
 }
