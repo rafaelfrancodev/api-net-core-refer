@@ -203,7 +203,7 @@
           "dependencies": {
             "MediatR": {
               "target": "Package",
-              "version": "[7.0.0, )"
+              "version": "[4.1.0, )"
             },
             "Microsoft.AspNetCore": {
               "target": "Package",
