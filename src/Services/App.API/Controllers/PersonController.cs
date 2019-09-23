@@ -64,7 +64,7 @@ namespace App.API.Controllers
         [ProducesResponseType((int)HttpStatusCode.InternalServerError)]
         public async Task<IActionResult> PutAsync([FromRoute] int id, PersonInput input)
         {
-            var resultado = await _personAppService.UpdateAsync(input.Id, input);
+            var resultado = await _personAppService.UpdateAsync(id, input);
             return OkOrNoContent(resultado);
         }
 

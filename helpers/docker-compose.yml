@@ -21,7 +21,7 @@ services:
     image: mysql:5.7
     environment:
       MYSQL_ROOT_PASSWORD: "123Aa321"
-      MYSQL_DATABASE: "db_defatul"
+      MYSQL_DATABASE: "bd_app"
     ports:
       - "33306:3306"
     volumes:
