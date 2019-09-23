@@ -1,20 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using DEV.API.App.Infra.IoC;
+using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Rewrite;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
-using Microsoft.AspNetCore.Rewrite;
 using Swashbuckle.AspNetCore.Swagger;
-using MediatR;
-using DEV.API.App.Infra.IoC;
+using System.Reflection;
+using AutoMapper;
 
 namespace App.API
 {
@@ -32,6 +26,7 @@ namespace App.API
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddOptions();
+            services.AddAutoMapper(Assembly.Load("DEV.Api.App.Application"));
             #region AddCors
 
             services.AddCors(options =>
@@ -89,7 +84,7 @@ namespace App.API
 
         void RegisterServices(IServiceCollection services, IConfiguration configuration)
         {
-           new RootBootstrapper();
+            new RootBootstrapper().RootRegisterServices(services, configuration);
         }
     }
 }
