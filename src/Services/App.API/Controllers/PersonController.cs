@@ -4,6 +4,7 @@ using DEV.Api.App.Application.Services.AppPerson.ViewModel;
 using DEV.API.App.Domain.Core.Model;
 using DEV.API.App.Domain.Core.Services;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
 using System.Threading.Tasks;
@@ -12,6 +13,7 @@ namespace App.API.Controllers
 {
     [Route("api/v1/[controller]")]
     [ApiController]
+    [Authorize]
     public class PersonController : BaseControllerCore
     {
         private readonly IPersonAppService _personAppService;

@@ -1,3 +1,5 @@
+C:\_src\_rafjs\DEV.API.App\src\Modules\App\DEV.Api.App.Application\obj\Debug\netcoreapp2.1\DEV.Api.App.Application.AssemblyInfoInputs.cache
+C:\_src\_rafjs\DEV.API.App\src\Modules\App\DEV.Api.App.Application\obj\Debug\netcoreapp2.1\DEV.Api.App.Application.AssemblyInfo.cs
 C:\_src\_rafjs\DEV.API.App\src\Modules\App\DEV.Api.App.Application\bin\Debug\netcoreapp2.1\DEV.Api.App.Application.deps.json
 C:\_src\_rafjs\DEV.API.App\src\Modules\App\DEV.Api.App.Application\bin\Debug\netcoreapp2.1\DEV.Api.App.Application.dll
 C:\_src\_rafjs\DEV.API.App\src\Modules\App\DEV.Api.App.Application\bin\Debug\netcoreapp2.1\DEV.Api.App.Application.pdb
@@ -6,9 +8,6 @@ C:\_src\_rafjs\DEV.API.App\src\Modules\App\DEV.Api.App.Application\bin\Debug\net
 C:\_src\_rafjs\DEV.API.App\src\Modules\App\DEV.Api.App.Application\bin\Debug\netcoreapp2.1\DEV.API.App.Domain.pdb
 C:\_src\_rafjs\DEV.API.App\src\Modules\App\DEV.Api.App.Application\bin\Debug\netcoreapp2.1\DEV.API.App.Domain.Core.pdb
 C:\_src\_rafjs\DEV.API.App\src\Modules\App\DEV.Api.App.Application\obj\Debug\netcoreapp2.1\DEV.Api.App.Application.csprojAssemblyReference.cache
-C:\_src\_rafjs\DEV.API.App\src\Modules\App\DEV.Api.App.Application\obj\Debug\netcoreapp2.1\DEV.Api.App.Application.csproj.CoreCompileInputs.cache
-C:\_src\_rafjs\DEV.API.App\src\Modules\App\DEV.Api.App.Application\obj\Debug\netcoreapp2.1\DEV.Api.App.Application.AssemblyInfoInputs.cache
-C:\_src\_rafjs\DEV.API.App\src\Modules\App\DEV.Api.App.Application\obj\Debug\netcoreapp2.1\DEV.Api.App.Application.AssemblyInfo.cs
 C:\_src\_rafjs\DEV.API.App\src\Modules\App\DEV.Api.App.Application\obj\Debug\netcoreapp2.1\DEV.Api.App.Application.csproj.CopyComplete
 C:\_src\_rafjs\DEV.API.App\src\Modules\App\DEV.Api.App.Application\obj\Debug\netcoreapp2.1\DEV.Api.App.Application.dll
 C:\_src\_rafjs\DEV.API.App\src\Modules\App\DEV.Api.App.Application\obj\Debug\netcoreapp2.1\DEV.Api.App.Application.pdb

@@ -1,3 +1,5 @@
+C:\_src\_rafjs\DEV.API.App\src\Modules\App\DEV.API.App.Infra.Repository\obj\Debug\netcoreapp2.1\DEV.API.App.Infra.Repository.AssemblyInfoInputs.cache
+C:\_src\_rafjs\DEV.API.App\src\Modules\App\DEV.API.App.Infra.Repository\obj\Debug\netcoreapp2.1\DEV.API.App.Infra.Repository.AssemblyInfo.cs
 C:\_src\_rafjs\DEV.API.App\src\Modules\App\DEV.API.App.Infra.Repository\bin\Debug\netcoreapp2.1\DEV.API.App.Infra.Repository.deps.json
 C:\_src\_rafjs\DEV.API.App\src\Modules\App\DEV.API.App.Infra.Repository\bin\Debug\netcoreapp2.1\DEV.API.App.Infra.Repository.runtimeconfig.json
 C:\_src\_rafjs\DEV.API.App\src\Modules\App\DEV.API.App.Infra.Repository\bin\Debug\netcoreapp2.1\DEV.API.App.Infra.Repository.runtimeconfig.dev.json
@@ -8,9 +10,6 @@ C:\_src\_rafjs\DEV.API.App\src\Modules\App\DEV.API.App.Infra.Repository\bin\Debu
 C:\_src\_rafjs\DEV.API.App\src\Modules\App\DEV.API.App.Infra.Repository\bin\Debug\netcoreapp2.1\DEV.API.App.Domain.Core.pdb
 C:\_src\_rafjs\DEV.API.App\src\Modules\App\DEV.API.App.Infra.Repository\bin\Debug\netcoreapp2.1\DEV.API.App.Domain.pdb
 C:\_src\_rafjs\DEV.API.App\src\Modules\App\DEV.API.App.Infra.Repository\obj\Debug\netcoreapp2.1\DEV.API.App.Infra.Repository.csprojAssemblyReference.cache
-C:\_src\_rafjs\DEV.API.App\src\Modules\App\DEV.API.App.Infra.Repository\obj\Debug\netcoreapp2.1\DEV.API.App.Infra.Repository.csproj.CoreCompileInputs.cache
-C:\_src\_rafjs\DEV.API.App\src\Modules\App\DEV.API.App.Infra.Repository\obj\Debug\netcoreapp2.1\DEV.API.App.Infra.Repository.AssemblyInfoInputs.cache
-C:\_src\_rafjs\DEV.API.App\src\Modules\App\DEV.API.App.Infra.Repository\obj\Debug\netcoreapp2.1\DEV.API.App.Infra.Repository.AssemblyInfo.cs
 C:\_src\_rafjs\DEV.API.App\src\Modules\App\DEV.API.App.Infra.Repository\obj\Debug\netcoreapp2.1\DEV.API.App.Infra.Repository.csproj.CopyComplete
 C:\_src\_rafjs\DEV.API.App\src\Modules\App\DEV.API.App.Infra.Repository\obj\Debug\netcoreapp2.1\DEV.API.App.Infra.Repository.dll
 C:\_src\_rafjs\DEV.API.App\src\Modules\App\DEV.API.App.Infra.Repository\obj\Debug\netcoreapp2.1\DEV.API.App.Infra.Repository.pdb
